@@ -7,8 +7,6 @@ var dying2 = 1;
 var death = 1000-pop;
 var hunger = 100;
 var health = 100;
-var elem = document.getElementById("myBar"); 
-var width = 1;
 //REAL WORLD TIMER********************
 
 //***************INTRO
@@ -22,9 +20,6 @@ setInterval(function(){
 }, 100);
 
 
-
-
-
 //*************** WORLD CLOCK **************
 var myVar = setInterval(myTimer, 1000);
 
@@ -32,10 +27,6 @@ function myTimer() {
   var d = new Date()
 document.getElementById("demo2").innerHTML = d.toLocaleTimeString();
 }
-
-
-setInterval(function(){width = pop/10; 
-	elem.width = width}, 1000);
 
 
 //for login thingy
@@ -69,6 +60,10 @@ function openHelp() {
 };
 
 //********************Progress Bar ***********************************************************
+
+var elem = document.getElementById("myBar"); 
+var width = 1;
+setInterval(function(){width = pop/10; elem.style.width = width + '%';document.getElementById("mybar").width = width}, 100);
 
 
 
@@ -236,7 +231,7 @@ function login() {
 
 
 function signup() {
-	var name = document.getElementById("name-field-signup").value;
+
 	var email = document.getElementById("email-field-signup").value;
 	var password = document.getElementById("password-field-signup").value;
 
@@ -271,7 +266,7 @@ function loginGoogle() {
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    alert('hi ' + name)
+    alert('hi')
     document.getElementById("welcomeMessage").style.display = "initial";
   } else {
     // No user is signed in.
