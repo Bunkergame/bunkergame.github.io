@@ -9,6 +9,10 @@ button {
 
 {box-sizing: border-box;}
 
+
+
+/******************************************** LOGIN POPUP ********************************
+
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   background-color: white;
@@ -21,16 +25,11 @@ button {
   position: fixed;
   top: 70px;
   right: 28px;
-  width: 75px;
-}
+  width: 75px;}
 #logintext {
-  font-size: 12pt;
-
-}
+  font-size: 12pt;}
 .formtext {
-  font-size: 16pt;
-}
-
+  font-size: 16pt;}
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
@@ -38,31 +37,23 @@ button {
   top: 65px;
   right: 15px;
   border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
+  z-index: 9;}
 /* Add styles to the form container */
 .form-container {
   max-width: 200px;
   padding: 10px;
-  background-color: white;
-}
-
+  background-color: white;}
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
   width: 80%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
-}
-
+  background: #f1f1f1;}
 /* When the inputs gets clicked, background change */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
   background-color: #ddd;
-  outline: none;
-}
-
+  outline: none;}
 /* Set a style for the submit/login button */
 .form-container .btn {
   background-color: #4CAF50;
@@ -73,17 +64,13 @@ button {
   margin-bottom:5px;
   opacity: 0.8;
   width:80px;
-  height: 50px;
-}
-
+  height: 50px;}
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
   color: black;
   width:80px;
-  height: 50px;
-}
-
+  height: 50px;}
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
@@ -91,8 +78,38 @@ button {
 
 
 
+/******************************************** CREATE ACCOUNT POPUP *********************************/
+.form-popup2 {
+  display: none;
+  position: fixed;
+  bottom: 65px;
+  right: 310px;
+  z-index: 9;}
+/* Add styles to the form container */
+.form-container2 {
+  width: 300px;
+  padding: 10px;
+  background-color: white;}
+.createaccount-button {
+  margin: 20px;
+  background-color: white;
+  color: black;
+  padding: 5px 5px;
+  border-width: 2px;
+  cursor: pointer;
+  opacity: 0.8;
+  height:40px;
+  align-content: center;
+}
+.formtext2 {
+  font-size:12pt;
+}
+#formtext21 {
+  font-size:9pt;
+}
 
-/* *********************SETTINGS */
+
+/* *********************SETTINGS *******************************************/
 .settings-button {
   background-color: white;
   color: black;
@@ -311,4 +328,8 @@ input[type=alphabutton], {
 
 #servicetitle {
   color:white;
+}
+
+.g-signin2 {
+  align-content:center;
 }

@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>Bunker</title>
+		<title>Bunkerx</title>
 		<link rel="stylesheet" type="text/css" href="bunker.css">
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<meta name="google-signin-client_id" content="759740784597-qp0dgprmnr94f2rk9e9ig1gufq9oshfl.apps.googleusercontent.com">
@@ -10,6 +10,7 @@
 
 <div class = "topbar">
 	<span id="title">Bunker</span><span id="demo2"></span>​
+	<h3 id="welcomeMessage">Test</h3>
 </div>
 
 
@@ -20,18 +21,19 @@
 	<div class = "main">
 		<button id="logintext"class="open-button" onclick="openForm()">Login</button>
 		<div class="form-popup" id="myForm">
-  			<form action="/action_page.php" class="form-container">
+  			<form class="form-container">
 			    <h1 class = "formtext">Login</h1>
 
 			    <label id="logintext" for="email"><b>Email</b></label>
-			    <input type="text" placeholder="Enter Email" name="email" required>
+			    <input type="text" placeholder="Enter Email" name="email" id="email-field">
 
 			    <label id="logintext" for="psw"><b>Password</b></label>
-			    <input type="password" placeholder="Enter Password" name="psw" required>
+			    <input type="password" placeholder="Enter Password" name="psw" id="password-field">
 
-			    <button id="logintext" type="submit" class="btn">Login</button>
+			    <button id="logintext" type="submit" class="btn" onclick="login()">Login</button>
 			    <button id="logintext" type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-			    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+			   <!--  <button id="logintext" type="submit" class="btn cancel" onclick="loginGoogle()"> Google</button> -->
+			    <div class="g-signin2" data-onsuccess="onSignIn" onclick="loginGoogle()"></div>
 			</form>
 		</div>
 		<button id="logintext"class="settings-button" onclick="openSettings()">Settings</button>
@@ -63,9 +65,6 @@
 
 		<button id="click me"onclick="Function()"> Generate Currency</button>
 		<p id="sys"></p>
-		<script src="bunker.js">
-			
-		</script>
 
 	</div>
 	<div id="myProgress">
@@ -156,11 +155,46 @@
   		<div id="myBar"></div>
 	</div>
 
+
+
+
+
+
+<script>
+/*******************************************************************************************
+</script>
+
+
 	<div class = "flex-container3">
 		<h2 id="servicetitle"> Services </h2>
+		<button id= "logintext" id="createaccount" class="createaccount-button" onclick="openform2()">Create Account</button>
+		<div class="form-popup2" id="myform2">
+  			<form class="form-container2">
+
+			    <h1 class = "formtext2">Create an Account</h1>
+			    <p></p>
+			    <label id="formtext21" for="name"><b>Name:  </b></label>
+			    <input type="text" placeholder="Enter Name" name="name" id="name-field" require>
+			    <p></p>
+			    <label id="formtext21" for="email"><b>Email:  </b></label>
+			    <input type="text" placeholder="Enter Email" name="email" id="email-field" require>
+			    <p></p>
+			    <label id="formtext21" for="psw"><b>Password:  </b></label>
+			    <input type="password" placeholder="Enter Password" name="psw" id="password-field"require>
+
+			</form>
 	</div>
 
+
+
+
+
+
+
+
+
 	<script>
+/* **********************************************************************************/
 
 	// REAL WORLD TIMER********************
 	//ITEM IDEA TECHNOLOGY
@@ -172,6 +206,26 @@
 	//document.getElementById("demo2").innerHTML = d.toLocaleTimeString();
 	//}
 	</script>
+
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAP11_BNtFkMewrJJ96xb4zdLXgWNvFyeg",
+	    authDomain: "bunker-1549557725441.firebaseapp.com",
+	    databaseURL: "https://bunker-1549557725441.firebaseio.com",
+	    projectId: "bunker-1549557725441",
+	    storageBucket: "",
+	    messagingSenderId: "759740784597"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="bunker.js"></script>
+
 
 </body>
 </html>
