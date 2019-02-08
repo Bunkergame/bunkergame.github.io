@@ -145,7 +145,45 @@ button {
   width: 75px;
 }
 
+.pause-button {
+  background-color: white;
+  color: black;
+  padding: 5px 5px;
+  border-color: black;
+  border-width: 2px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 190px;
+  right: 28px;
+  width: 75px;
+}
 
+
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 
 html {
     height: 100%;
@@ -161,7 +199,7 @@ body {
   font-size: 15pt;
   font-weight: normal;/* For browsers that do not support gradients */
  
-  background: linear-gradient(180deg, skyblue, white);
+  background-image: url("wall.jpg");
   text-align: center; /* Standard syntax */
 }
 
@@ -195,12 +233,12 @@ body {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
+    background-image: url("wall3.jpg");
     align-content: center;    
     justify-content: center;
   }
 .flex-container > div {
-    background-color: none;
+    
     width:200px;
     margin: 10px;
     padding: 2px;
@@ -260,7 +298,8 @@ body {
 
 #sys {
   font-size: 20pt;
-  font-family: impact;
+  font-family: verdana;
+  color:white;
 }
 
 #explaintext {
@@ -298,7 +337,7 @@ input[type=alphabutton], {
 
 .topbar {
     overflow-color:white;
-    background-color:black;
+    background-image:url(wall2.jpeg);
     position: fixed;
     top: 0;
     left: 0;
