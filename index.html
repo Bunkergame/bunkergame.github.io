@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Bunkerx</title>
+		<link rel="stylesheet" type="text/css" href="bunker.css">
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-client_id" content="759740784597-qp0dgprmnr94f2rk9e9ig1gufq9oshfl.apps.googleusercontent.com">
+	</head>
+
+<div class = "topbar">
+	<span id="title">Bunker</span><span id="demo2"></span>​
+	<h3 id="welcomeMessage">Test</h3>
+</div>
+
+
+
+<body>
+
+
+	<div class = "main">
+		<button id="logintext"class="open-button" onclick="openForm()">Login</button>
+		<div class="form-popup" id="myForm">
+  			<form class="form-container">
+			    <h1 class = "formtext">Login</h1>
+
+			    <label id="logintext" for="email"><b>Email</b></label>
+			    <input type="text" placeholder="Enter Email" name="email" id="email-field">
+
+			    <label id="logintext" for="psw"><b>Password</b></label>
+			    <input type="password" placeholder="Enter Password" name="psw" id="password-field">
+
+			    <button id="logintext" type="submit" class="btn" onclick="login()">Login</button>
+			    <button id="logintext" type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+			   <!--  <button id="logintext" type="submit" class="btn cancel" onclick="loginGoogle()"> Google</button> -->
+			    <div class="g-signin2" data-onsuccess="onSignIn" onclick="loginGoogle()"></div>
+			</form>
+		</div>
+		<button id="logintext"class="settings-button" onclick="openSettings()">Settings</button>
+		<div class="settings-popup" id="mySettings">
+			<form action="/action_page.php" class="form-container">
+				<button id="logintext" type="submit" class="btn cancel" onclick="closeSettings()">
+			</form>
+		</div>
+
+		</div>
+		<button id="logintext"class="help-button" onclick="openHelp()">Help</button>
+		</div>
+		
+		<div class = "flex-container2">
+			<p id="demo"></p>
+			
+			<div id="rcorners">
+				<h3 id="population">Population: 1000 </h3>
+				<h3 id="death">Deaths: 0 </h3>
+			</div>
+			<div id="rcorners">
+				<h3 id="hunger">Hunger: 100 % </h3>
+				<h3 id="health">Health: 100 % </h3>
+			</div>
+		</div>
+		
+
+		<p></p>
+
+		<button id="click me"onclick="Function()"> Generate Currency</button>
+		<p id="sys"></p>
+
+	</div>
+	<div id="myProgress">
+  		<div id="myBar"></div>
+	</div>
+	
+	<div class = "flex-container">
+		<div>
+		    <h3 id="particlecount">Sponsor a Child </h3>
+		    <p id="explaintext"> Ensures surviving children <p id="explaintext">+5 population</p>
+		    <div><input type="button" value="Purchase" onclick="ms()"> $30 </div>
+		</div>
+		<div>
+		    <h3 id="particlecount">Cash Printers: 0 </h3>
+		    <p id="explaintext">Prints cash to help <p id="explaintext">increase income +$1/click</p>
+		    <div><input type="button" value="Purchase" onclick="msg()"> $ 40 </div>
+		</div>
+		<div>
+	    	<h3 id="firstaid">First-Aid Kit</h3>
+	    	<p id="explaintext">Saving some injured +30% <p id="explaintext"> Health</p>
+	    	<div><input type="button" value="Purchase" onclick="msg4()"> $ 100 </div>
+	    </div>
+
+	    <div>
+	    	<h3 id="food">Food</h3>
+	    	<p id="explaintext">Edible canned goods +50% <p id="explaintext"> Hunger</p>
+	    	<div><input type="button" value="Purchase" onclick="msg3()"> $ 200 </div>
+	    </div>
+	    <div>
+	    	<h3 id="clickycount">Workers: 0</h3>
+	    	<p id="explaintext">Automatically helps to make <p id="explaintext"> money</p>
+	    	<div><input type="button" value="Purchase" onclick="msg2()"> $ 2,000 </div>
+	    </div>
+	    <div>
+	    	<h3 id="Doctor">Doctor</h3>
+	    	<p id="explaintext">Assisting birth of new <p id="explaintext"> humans +1/sec population</p>
+	    	<div><input type="button" value="Purchase" onclick="msg5()"> $ 10,000 </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Alpha Key</h3>
+	    	<p id="explaintext">Access more features, <p id="explaintext"> items, and statistics. </p>
+	    	<div><input type="button" value="Purchase" onclick="msg6()"> $ 20,000 </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Housing</h3>
+	    	<p id="explaintext">Living quarters for people! <p id="explaintext">  +20% happiness</p>
+	    	<div><input id = "houseshow" type="button" value = "Locked" disabled> </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Water Filter</h3>
+	    	<p id="explaintext">Clean water to drink. -20% <p id="explaintext">death rate </p>
+	    	<div><input id = "houseshow" type="button" value = "Locked" disabled> </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Schooling</h3>
+	    	<p id="explaintext">Hire a teacher. <p id="explaintext"> </p>
+	    	<div><input id = "houseshow" type="button" value = "Locked" disabled> </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Cash Machine</h3>
+	    	<p id="explaintext"> <p id="explaintext"> </p>
+	    	<div><input id = "houseshow" type="button" value = "Locked" disabled> </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Electricity</h3>
+	    	<p id="explaintext"><p id="explaintext"> </p>
+	    	<div><input id = "houseshow" type="button" value = "Locked" disabled> </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Air Purification</h3>
+	    	<p id="explaintext"> <p id="explaintext"> </p>
+	    	<div><input id = "houseshow" type="button" value = "Locked" disabled> </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Stock Market</h3>
+	    	<p id="explaintext"> <p id="explaintext"> </p>
+	    	<div><input id = "houseshow" type="button" value = "Locked" disabled> </div>
+	    </div>
+	    <div>
+	    	<h3 id="key">Omega Key</h3>
+	    	<p id="explaintext"> <p id="explaintext"> </p>
+	    	<div><input id = "houseshow" type="button" value = "Locked" disabled> </div>
+	    </div>
+
+
+	</div>
+	<div id="myProgress">
+  		<div id="myBar"></div>
+	</div>
+
+
+
+
+
+
+<script>
+/*******************************************************************************************
+</script>
+
+
+	<div class = "flex-container3">
+		<h2 id="servicetitle"> Services </h2>
+		<button id= "logintext" id="createaccount" class="createaccount-button" onclick="openform2()">Create Account</button>
+		<div class="form-popup2" id="myform2">
+  			<form class="form-container2">
+
+			    <h1 class = "formtext2">Create an Account</h1>
+			    <p></p>
+			    <label id="formtext21" for="name"><b>Name:  </b></label>
+			    <input type="text" placeholder="Enter Name" name="name" id="name-field" require>
+			    <p></p>
+			    <label id="formtext21" for="email"><b>Email:  </b></label>
+			    <input type="text" placeholder="Enter Email" name="email" id="email-field" require>
+			    <p></p>
+			    <label id="formtext21" for="psw"><b>Password:  </b></label>
+			    <input type="password" placeholder="Enter Password" name="psw" id="password-field"require>
+
+			</form>
+	</div>
+
+
+
+
+
+
+
+
+
+	<script>
+/* **********************************************************************************/
+
+	// REAL WORLD TIMER********************
+	//ITEM IDEA TECHNOLOGY
+	
+	//var myVar = setInterval(myTimer, 1000);
+
+	//function myTimer() {
+	//  var d = new Date("00:00:00")
+	//document.getElementById("demo2").innerHTML = d.toLocaleTimeString();
+	//}
+	</script>
+
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAP11_BNtFkMewrJJ96xb4zdLXgWNvFyeg",
+	    authDomain: "bunker-1549557725441.firebaseapp.com",
+	    databaseURL: "https://bunker-1549557725441.firebaseio.com",
+	    projectId: "bunker-1549557725441",
+	    storageBucket: "",
+	    messagingSenderId: "759740784597"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="bunker.js"></script>
+
+
+</body>
+</html>
