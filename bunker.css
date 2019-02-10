@@ -1,6 +1,6 @@
 
 button {
-  padding: 20px;
+  padding: 10px;
   font-size: 18pt;
   border-radius: 12px;
   background: linear-gradient(180deg, lightgreen, skyblue);
@@ -131,6 +131,16 @@ button {
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
+#settingsbox {
+  width:200px;
+  height:100px;
+  background:white;
+  stroke: black;
+  font-size:12pt;
+  padding:10px;
+}
+
+
 .help-button {
   background-color: white;
   color: black;
@@ -209,6 +219,7 @@ body {
     background-color: none;
     align-content: center;    
     justify-content: center;
+    margin: 50pt;
   }
 .flex-container2 > div {
     background-color: white;
@@ -229,6 +240,16 @@ body {
   height: 30px;
   background-color:green;
 }
+#myProgress1 {
+  width: 100%;
+  background-color: none;
+}
+
+#myBar1 {
+  width: 100%;
+  height: 10px;
+  background-color:none;
+}
 
 .flex-container {
     display: flex;
@@ -247,10 +268,20 @@ body {
 
   }
 
+.flex-container4 {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: none;
+    align-content: center;    
+    justify-content:space-around;
+    
+  }
+
+
 .flex-container3 {
   display: flex;
   flex-wrap: wrap;
-  background-color: black;
+  background-color: none;
   align-content: center;    
   justify-content: center;
 }
@@ -276,7 +307,7 @@ body {
   background:black;
   padding: 4px; 
   width: 200px;
-  height: 85px;
+  height: 115px;
   align-content: center; 
 }
 #population {
@@ -287,6 +318,11 @@ body {
   color:white;
   font-size:12pt;
 }
+#csr {
+  color:white;
+  font-size:12pt;
+}
+
 #hunger {
   color:white;
   font-size:12pt;
@@ -297,9 +333,12 @@ body {
 }
 
 #sys {
-  font-size: 20pt;
-  font-family: verdana;
   color:white;
+  font-size:12pt;
+}
+#sys1 {
+  color:white;
+  font-size:12pt;
 }
 
 #explaintext {
@@ -371,4 +410,17 @@ input[type=alphabutton], {
 
 .g-signin2 {
   align-content:center;
+}
+#hi {
+  font-size:12px;
+  color:white;
+  text-align: right;
+  margin: 10px;
+}
+#coin1 {
+  color:white;
+}
+#coin2 {
+  color:white;
+  font-size:12px;
 }
