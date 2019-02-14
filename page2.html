@@ -22,23 +22,7 @@
 
 
 	<div class = "main">
-		<button id="logintext"class="open-button" onclick="openForm()">Login</button>
-		<div class="form-popup" id="myForm">
-  			<form class="form-container">
-			    <h1 class = "formtext">Login</h1>
-
-			    <label id="logintext" for="email"><b>Email</b></label>
-			    <input type="text" placeholder="Enter Email" name="email" id="email-field">
-
-			    <label id="logintext" for="psw"><b>Password</b></label>
-			    <input type="password" placeholder="Enter Password" name="psw" id="password-field">
-
-			    <button id="logintext" type="submit" class="btn" onclick="login()">Login</button>
-			    <button id="logintext" type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-			   <!--  <button id="logintext" type="submit" class="btn cancel" onclick="loginGoogle()"> Google</button> -->
-			    <div class="g-signin2" data-onsuccess="onSignIn" onclick="loginGoogle()"></div>
-			</form>
-		</div>
+		<a id="logintext"class="open-button" href="index.html"> Main </a>
 		<button id="logintext"class="settings-button" onclick="openSettings()">Settings</button>
 		<div class="settings-popup" id="mySettings">
 			<div id="settingsbox"> 
@@ -201,25 +185,6 @@
 /*******************************************************************************************
 </script>
 
-
-	<div class = "flex-container3">
-		<h2 id="servicetitle"> Services </h2>
-		<button id= "logintext" id="createaccount" class="createaccount-button" onclick="openform2()">Create Account</button>
-		<div class="form-popup2" id="myform2">
-  			<form class="form-container2">
-
-			    <h1 class = "formtext2">Create an Account</h1>
-			    <p></p>
-			    <label id="formtext21" for="name"><b>Name:  </b></label>
-			    <input type="text" placeholder="Enter Name" name="name" id="name-field" require>
-			    <p></p>
-			    <label id="formtext21" for="email"><b>Email:  </b></label>
-			    <input type="text" placeholder="Enter Email" name="email" id="email-field" require>
-			    <p></p>
-			    <label id="formtext21" for="psw"><b>Password:  </b></label>
-			    <input type="password" placeholder="Enter Password" name="psw" id="password-field"require>
-			</form>
-		</div>
 	</div>
 	<p id="hi"> Bunker v1.0 by Jayson Tian </p>
 
@@ -259,6 +224,7 @@
 	  firebase.initializeApp(config);
 	</script>
 	<script src="bunker.js"></script>
+	<script src="index.js"></script>
 
 
 </body>
