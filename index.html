@@ -1,80 +1,149 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style/index.css" />
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
+<body style="margin:0">
 
-<div id="placement" style="display:none">
-    <div class="navbar">
-      <a onclick="home()">Home</a>
-      <a href="#news">News</a>
-      <div class="dropdown">
-        <button class="dropbtn" id="dropdown">Logged Out 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a onclick="profile()">Profile</a>
-          <a href="#">Settings</a>
-          <a onclick="logout()">Logout</a>  
-        </div>
-      </div>
-      <a href="page1.html">Play</a>
-      <a href="#news">Rankings</a>
-    </div> 
-  </div>
-<div id="home" style="display:none">
-  <h1 id="text1"> Welcome to the Bunker </h1>
-  <h1 id="text2"> The ultimate clicking game for boring times </h1>
-  <div class = "homenews">
-    <div class="card">
-      <img src="card1.jpeg" alt="Card1" id="card1pic">
-      <div class="container">
-        <h4><b>Bunker v1.0 is out!</b></h4> 
-        <p id="card1text"align=justify>Feel free to play the first version of bunker! Here is a list of included features in version 1. There are many bugs that will hopefully be fixed in later updates.</p> 
-        <a id="boo1" href="page1.html"> PLAY </a>
-      </div>
+<ul>
+  <li style="margin-left:10px;"><a onclick='home()'>Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Help</a></li>
+  <li style="float:right;margin-right:20px;"id='btnlogin'><a onclick="document.getElementById('id01').style.display='block'" class="active">Login</a></li>
+  
+  <li class="dropdown">
+    <button id='btnuser'> ERROR LOAD </button>
+    <span class="caret"></span></button>
+    <div id='dropmenu'>
+      <a onclick='oo()'>My Games</a>
+      <a onclick='showchat()'>Chat</a>
+      <a onclick='settings()'>Settings</a>
+      <a onclick='logout()'>Logout</a>
     </div>
-    <div class="card">
-      <img src="card2.jpeg" alt="Card1" id="card1pic">
-      <div class="container">
-        <h4><b>Version 1.5 Update</b></h4> 
-        <p id="card1text"align=justify>Saving progress, stage 2 items working, carbon monoxide episode begins. On the main page, news as well as profile updates, and forgotten password.</p> 
-        <p align=center>COMING SOON </p>
-      </div>
+</ul>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <h1 class='text1'>The Bunker Game</h1>
+    <div class="numbertext">1 / 3</div>
+    <img src="img/05.jpg" style="width:100%">
+    <div class="text">Minimalistic clicking game of survival.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <h1 class='text1'> Echo </h1>
+    <div class="text">A game of memory and sounds.</div>
+    <div class="numbertext">2 / 3</div>
+    <img src="img/04.png" style="width:100%">
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+  </div>
+
+
+  <div id='flex1'>
+    <div>
+      <h3>About</h3>
+      <p>Basically only the demo for version 2 is working, login, and a CHATROOM that is actually WORKING. But you need to verify your email to chat though. Despite that, you will need to login or create an account to do anything on this page, so SIGN UP. </p>
+    </div>
+    <div>
+      <center><button id='btn'>Play Now</button></center>
     </div>
   </div>
-  <p id="hi"> Bunker v1.0 by Jayson Tian </p>
+
+  <div id="id01" class="modal">
+  
+  <div class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <h2>Login</h2>
+      <p style="font-size:11.5px">Login Required To Play Games</p>
+    </div>
+
+    <div class="container">
+      <input id='email_field' type="text" placeholder="Username" name="uname" required>
+      <input id='password_field' type="password" placeholder="Password" name="psw" required>
+        
+      <button style="font-size:14px"type="submit" onclick='login()'>Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="signup()" class="cancelbtn">Sign Up</button>
+      <span style='font-size:12px'class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </div></div></li></ul>
+
+
+<div id="id02" class="modal" style="z-index: 10000000;">
+  <div class="modal-content animate">
+    <div class="imgcontainer">
+      <p style="font-size:11.5px">What is your name?</p>
+    </div>
+
+    <div class="container">
+      <input id='name_field' type='text' required>
+      <button style="font-size:14px"type="submit" onclick='login()'>Submit</button>
+    </div>
+  </div>
 </div>
 
-<body>
-  <div id="login_div" class="main-div" style="display:block">
-    <h3 class="whitetext">Login to Bunker</h3>
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
-
-    <button onclick="login()">Login</button>
-    <button onclick="signup()">Sign Up</button>
-  </div>
-
-  <div class="inputname-div" id="inputname_div">
-    <h3 class="whitetext">What is your name?</h3>
-    <input id="inputname"type="name" placeholder="Name..." id="name_field" />
-    <button onclick="submitname()">Submit</button>
-  </div>
-
-  <div id="user_div" class="loggedin-div">
-    <h3 class="whitetext" id="welcome">Welcome User</h3>
-    <p class="whitetext"" id="user_para">ERROR: You are currently logged in. Please check back again later.</p>
-    <button onclick="logout()">Logout</button>
-    <button id = "verifybutton"onclick="sendverification()">Send Verification</button>
-  </div>
-
+<div id='chatbox'>
+  <p style="text-align:center; font-size:30px;">Chatbox</p>
+  <div id='chatlog'></div>
+  <input id='chatinput'placeholder='Type Something...'></input>
 </div>
 
+<div id='settings' style='display:none'>
+  <div class="tab">
+    <h2 style='margin-left:20px'> Settings</h2>
+    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Account & Privacy</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Purchases</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Options</button>
+    <button class="tablinks" onclick="openCity(event, 'Regulatory')">Regulatory</button>
+  </div>
 
-  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+  <div id="London" class="tabcontent">
+    <h3>Account & Privacy</h3>
+    <h4>Email Verification</h4>
+    <p id='verify'></p>
+    <button onclick='sendverification()' id='verifybtn'>Send Verification</button>
+    <h4>Cookie Policy</h4>
+    <p> Enabling cookies is necessary as</p>
+  </div>
+
+  <div id="Paris" class="tabcontent">
+    <h3>Purchases</h3>
+    <p>Game collections and purchase.</p> 
+  </div>
+
+  <div id="Tokyo" class="tabcontent">
+    <h3>Options</h3>
+    <p>Sound, video, and data configuration.</p>
+  </div>
+
+  <div id="Regulatory" class="tabcontent">
+    <h3>Regulatory</h3>
+    <p>About the creator.</p>
+  </div>
+</div>
+
+<p> </p>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -90,7 +159,6 @@
   <script src="index.js"></script>
 
 
+
 </body>
-
-</html>
-
+</html> 
